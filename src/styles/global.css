@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dark-jungle: #212a29;
-  --color-kariyasu: #dfb34c;
+  --color-theme-dark-jungle: #212a29;
+  --color-theme-kariyasu: #dfb34c;
 }
 
 /* CSS */

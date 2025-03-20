@@ -1,5 +1,10 @@
 ---
 import './src/styles/global.css'
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+
+const { title } = Astro.props
+
 ---
 
 <!doctype html>
@@ -7,20 +12,20 @@ import './src/styles/global.css'
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+	 	<meta name="description" content="A music shop focus on vinyl records" /> 
+		<meta name="author" content="Xabier F" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://minutestometal.dev" />
+		<meta property="twitter:title" content="Minutes To Metal | Shop" />
+		<meta property="twitter:description" content="A music shop focus on vinyl records" />
+		<meta property="twitter:image" content="https://minutestometal.dev/og-image.png" />
+		<meta name="theme-color" content="#212a29" />
+				<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-theme-dark-jungle text-theme-kariyasu">
+		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
