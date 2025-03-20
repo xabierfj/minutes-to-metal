@@ -6,6 +6,15 @@ dist/
 .vscode/
 .env
 
+
+# VS Code settings
+.vscode/
+
+# Git-specific files
+.git/
+.gitconfig
+
+
 # dependencies
 node_modules/
 
