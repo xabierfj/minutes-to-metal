@@ -1,19 +1,35 @@
----
-import HeaderButton from "./HeaderButton.astro";
----
-
-<header class="mx-auto pt-5">
-  <div class="mx-auto text-center mb-2">
-    <h1>
-      <a href="/" class="text-4xl font-bold"> Minutes To Metal </a>
-    </h1>
-  </div>
-  <div class="text-center">
-    <nav class="flex flex-col justify-center text-center md:flex-row">
-      <HeaderButton href="/music"> Music </HeaderButton>
-      <HeaderButton href="/appareal"> Appareal </HeaderButton>
-      <HeaderButton href="/artists"> Artists </HeaderButton>
-      <HeaderButton href="/about"> About </HeaderButton>
+<header class="p-4 text-theme-kariyasu">
+  <div class="mx-auto grid grid-cols-3 items-center justify-between">
+    <a href="/" class="col-span-1 items-center">
+      <img src="images/web-logo.webp" alt="Web Logo" class="h-22" />
+    </a>
+    <!-- Format this code in more stlysh way -->
+    <nav class="col-span-1">
+      <ul class="flex flex-row justify-center space-x-6">
+      <li class="relative group">
+        <a href="#" class="text-theme-kariyasu  transition-colors duration-200 py-2 px-3">
+        Music
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-theme-kariyasu"></span>
+        </a>
+      </li>
+      <li class="relative group">
+        <a href="#" class="text-theme-kariyasu  transition-colors duration-200 py-2 px-3">
+        Apparel
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-theme-kariyasu"></span>
+        </a>
+      </li>
+      <li class="relative group">
+        <a href="#" class="text-theme-kariyasu  transition-colors duration-200 py-2 px-3">
+        Artist
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-theme-kariyasu"></span>
+        </a>
+      </li>
+      </ul>
     </nav>
+    <div class="col-span-1 text-right mr-3 space-x-4">
+      <button class="text-theme-kariyasu">🔍</button>
+      <button class="text-theme-kariyasu">👤</button>
+      <button class="text-theme-kariyasu">🛒</button>
+    </div>
   </div>
 </header>
