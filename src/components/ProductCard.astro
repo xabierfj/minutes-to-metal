@@ -1,0 +1,67 @@
+---
+
+const { title, artist, description, price, albumArtUrl, isPreOrder } = Astro.props
+
+---
+
+<article class="font-sans max-w-xs sm:max-w-sm mx-auto my-4 cursor-pointer">
+  <div class="relative h-8 mb-1">
+    {isPreOrder && (
+      <span class="absolute top-0 right-0 bg- text-theme-kariyasu text-xs sm:text-sm font-semibold px-3 py-1 tracking-wide">
+        Pre-Order
+      </span>
+    )}
+  </div>
+
+  <div class="relative flex justify-center items-center mb-0">
+    <img
+    src={albumArtUrl}
+    alt={`Album art for ${title}`}
+    loading="lazy"
+    width="400" height="400"
+    class="block object-cover z-0 w-full h-full"
+  />
+  </div>
+  <div class="z-30 flex justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out">
+    <button
+      type="button"
+      class="bg-gray-700 text-theme-kariyasu py-1.5 px-4 text-xs font-medium shadow hover:bg-opacity-80 transition-colors pointer-events-auto"
+      aria-label={`Quick view ${title}`}
+    >
+      Quick View
+    </button>
+  </div>
+</div>
+  <div class="text-center mt-4 px-2">
+    <h3 class="text-sm sm:text-base font-semibold uppercase leading-tight tracking-normal">
+      {title}
+    </h3>
+    <p class="text-xs sm:text-sm text-theme-kariyasu uppercase tracking-wider mt-2">
+      {artist}
+    </p>
+    <p class="text-base sm:text-lg font-bold mt-2">
+      {price}
+    </p>
+  </div>
+</article>
+
+<!--          <article class="flex">
+                <a href={`/music/${slug}`} class="mb-2 xl:mb-0 transition hover:scale-110">
+                  <img 
+                    transition:name={`img-${slug}`}
+                    class="mr-5 w-48 rounded"
+                    src={image}
+                    alt={title}
+                  />
+                </a>
+                <div class="flex flex-col justify-center">
+                  <h2 
+                    transition:name={`title-${slug}`}
+                    class="mb-2 text-2xl font-bold leading-tight text-theme-kariyasu"
+                  >
+                    {title}
+                  </h2>
+                  <p class="mb-2 text-theme-kariyasu">{price}</p>
+                  <p class="mb-4 text-theme-kariyasu max-w-sm">{description}</p>
+                </div>
+              </article> -->
